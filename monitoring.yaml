@@ -5,7 +5,7 @@ metadata:
 spec:
   serviceMonitorSelector:
     matchLabels:
-      team: hello-world-team
+      team: boracho
   resources:
     requests:
       memory: 400Mi
@@ -13,12 +13,12 @@ spec:
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: hello-world
+  name: boracho
   labels:
-    team: hello-world-team
+    team: boracho
 spec:
   selector:
     matchLabels:
-      app: hello-world
+      app: test-app
   endpoints:
   - port: metrics
